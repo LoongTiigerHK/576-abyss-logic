@@ -113,9 +113,8 @@ fig.update_layout(
 # 4. 最后一步：显示图形（这时 fig 已经定义好了）
 st.plotly_chart(fig, use_container_width=True, theme="streamlit")
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
-# use_container_width=True 是适配手机的关键
-st.plotly_chart(fig, use_container_width=True, theme="streamlit")
-st.plotly_chart(fig, use_container_width=True)
+
+
 
 
 
