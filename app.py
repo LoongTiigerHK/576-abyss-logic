@@ -3,7 +3,9 @@ import plotly.graph_objects as go
 
 import plotly.graph_objects as go
 import numpy as np
-
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+# use_container_width=True 是适配手机的关键
+st.plotly_chart(fig, use_container_width=True, theme="streamlit")
 # --- 数据定义 ---
 # 坐标 (初爻, 中爻, 上爻) | 1=阳, 2=阴
 vertices = {
@@ -84,4 +86,5 @@ fig.update_layout(
 
 
 st.plotly_chart(fig, use_container_width=True)
+
 
