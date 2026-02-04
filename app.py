@@ -79,4 +79,5 @@ fig.update_layout(
     height=800
 )
 
-fig.show()
+
+st.plotly_chart(fig, use_container_width=True)
