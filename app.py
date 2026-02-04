@@ -1,3 +1,6 @@
+import streamlit as st
+import plotly.graph_objects as go
+
 import plotly.graph_objects as go
 import numpy as np
 
@@ -81,3 +84,4 @@ fig.update_layout(
 
 
 st.plotly_chart(fig, use_container_width=True)
+
