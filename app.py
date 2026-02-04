@@ -12,27 +12,11 @@ st.set_page_config(layout="wide")
 
 st.title("🌌 576-Abyss-Logic 观测站")
 
-# 2. 生成逻辑数据（这里是你的核心算法）
-# 示例：生成一个 3D 点
-fig = go.Figure(data=[go.Scatter3d(
-    x=[1.5], y=[1.5], z=[1.5], 
-    mode='markers+text',
-    text=["恒"],
-    marker=dict(size=10, color='red')
-)])
 
-# 3. 设置手机端适配的布局
-fig.update_layout(
-    margin=dict(l=0, r=0, b=0, t=0),
-    scene=dict(aspectmode='cube'),
-    height=600  # 确保手机上有足够高度
-)
 
-# 4. 最后一步：显示图形（这时 fig 已经定义好了）
-st.plotly_chart(fig, use_container_width=True, theme="streamlit")
-st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
-# use_container_width=True 是适配手机的关键
-st.plotly_chart(fig, use_container_width=True, theme="streamlit")
+
+
+
 # --- 数据定义 ---
 # 坐标 (初爻, 中爻, 上爻) | 1=阳, 2=阴
 vertices = {
@@ -110,9 +94,29 @@ fig.update_layout(
     showlegend=True,
     height=800
 )
+# 2. 生成逻辑数据（这里是你的核心算法）
+# 示例：生成一个 3D 点
+fig = go.Figure(data=[go.Scatter3d(
+    x=[1.5], y=[1.5], z=[1.5], 
+    mode='markers+text',
+    text=["恒"],
+    marker=dict(size=10, color='red')
+)])
 
+# 3. 设置手机端适配的布局
+fig.update_layout(
+    margin=dict(l=0, r=0, b=0, t=0),
+    scene=dict(aspectmode='cube'),
+    height=600  # 确保手机上有足够高度
+)
 
+# 4. 最后一步：显示图形（这时 fig 已经定义好了）
+st.plotly_chart(fig, use_container_width=True, theme="streamlit")
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+# use_container_width=True 是适配手机的关键
+st.plotly_chart(fig, use_container_width=True, theme="streamlit")
 st.plotly_chart(fig, use_container_width=True)
+
 
 
 
